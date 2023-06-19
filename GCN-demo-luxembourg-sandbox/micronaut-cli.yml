@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, data, data-jdbc, flyway, gcn-bom, gcn-license, gcn-oci-cloud-app, gcn-oci-database, gcn-oci-k8s, gcn-oci-metrics, gcn-oci-security, gcn-oci-tracing, graalvm, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, kubernetes-client, logback, management, maven, micrometer, micrometer-oracle-cloud, netty-server, oracle-cloud-atp, oracle-cloud-sdk, readme, security-annotations, security-jwt, security-oauth2, shade, test-resources, tracing-opentelemetry-annotations, tracing-opentelemetry-exporter-zipkin, tracing-opentelemetry-http, tracing-opentelemetry-zipkin, views-thymeleaf, yaml]

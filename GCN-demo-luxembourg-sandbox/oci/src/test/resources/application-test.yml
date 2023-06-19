@@ -1,0 +1,20 @@
+micronaut:
+  metrics:
+    export:
+      oraclecloud:
+        enabled: false
+    enabled: true
+custom:
+  thread:
+    count:
+      initialDelay: 10h
+flyway:
+  datasources:
+    default:
+      enabled: true
+datasources:
+  default:
+    schema-generate: NONE
+    dialect: ORACLE
+    ocid: ''
+    walletPassword: ''

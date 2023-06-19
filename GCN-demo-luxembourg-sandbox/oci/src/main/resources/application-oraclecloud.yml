@@ -1,0 +1,52 @@
+micronaut:
+  security:
+    endpoints:
+      logout:
+        enabled: true
+        get-allowed: true
+    oauth2:
+      clients:
+        gcn:
+          client-id: '${OAUTH_CLIENT_ID:xxx}'
+          client-secret: '${OAUTH_CLIENT_SECRET:yyy}'
+          openid:
+            issuer: '${OAUTH_ISSUER:zzz}'
+    authentication: idtoken
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: '${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}'
+  metrics:
+    enabled: true
+    export:
+      oraclecloud:
+        enabled: true
+        namespace: change-me
+  application:
+    name: oci
+datasources:
+  default:
+    ocid: ''
+    walletPassword: ''
+    dialect: ORACLE
+flyway:
+  datasources:
+    default:
+      enabled: true
+oci:
+  config:
+    profile: DEFAULT
+otel:
+  exclusions:
+  - /health
+  traces:
+    exporter: zipkin
+  exporter:
+    zipkin:
+      endpoint: 'https://[redacted].apm-agt.us-phoenix-1.oci.oraclecloud.com/20200101/observations/public-span?dataFormat=zipkin&dataFormatVersion=2&dataKey=[public key]'
+netty:
+  default:
+    allocator:
+      max-order: 3
